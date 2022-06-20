@@ -1,10 +1,10 @@
 class Solution {
 
-/**
- * @param Integer[] $nums
- * @param Integer[] $index
- * @return Integer[]
- */
+    /**
+    * @param Integer[] $nums
+    * @param Integer[] $index
+    * @return Integer[]
+    */
     function createTargetArray($nums, $index) {
         $target = [];
         for ($i = 0; $i < count($nums); $i++) {
