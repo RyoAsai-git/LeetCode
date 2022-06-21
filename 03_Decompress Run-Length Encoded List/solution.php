@@ -17,3 +17,4 @@ function decompressRLElist($nums) {
 Memory Usage: 20.1 MB, less than 31.25% of PHP online submissions for Decompress Run-Length Encoded List. -->
 
 <!-- https://www.php.net/manual/ja/function.array-fill.php -->
+<!-- https://www.php.net/manual/ja/function.array-merge.php -->
