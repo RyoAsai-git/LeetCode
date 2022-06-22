@@ -51,24 +51,12 @@ class Solution {
     * @return Integer
     */
     function rangeSumBST($root, $low, $high) {
-        $sum = 0;
-        $this->inOrderTraversal($root, $sum, $low, $high);
-
+		$val = $root->val;
+        $sum = ($val>=$low && $val<=$high) ? $val : 0;
+        if ($val>$low && $root->left!==null)
+            $sum += $this->rangeSumBST($root->left, $low, $high);
+        if ($val<$high && $root->right!==null)
+            $sum += $this->rangeSumBST($root->right, $low, $high);
         return $sum;
-    }
-
-    function inOrderTraversal($node, &$sum, $low, $high) {
-        if($node->val == null) {
-            return;
-        }
-        if($node->val >= $low) {
-            $this->inOrderTraversal($node->left, $sum, $low, $high);
-        }
-        if(($node->val <= $high) && ($node->val >= $low)) {
-            $sum += $node->val;
-        } 
-        if($node->val <= $high) {
-            $this->inOrderTraversal($node->right, $sum, $low, $high);
-        }           
-    }
+	}
 }
