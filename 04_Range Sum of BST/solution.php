@@ -39,3 +39,36 @@ Lよりnode.valueが大きい場合は左のnodeへ移り、Rよりnode.valueが
 <!-- Runtime: 144 ms, faster than 25.00% of PHP online submissions for Range Sum of BST.
 Memory Usage: 27 MB, less than 33.33% of PHP online submissions for Range Sum of BST.
 Next challenges: -->
+
+
+<!-- 別解 -->
+class Solution {
+
+    /**
+    * @param TreeNode $root
+    * @param Integer $low
+    * @param Integer $high
+    * @return Integer
+    */
+    function rangeSumBST($root, $low, $high) {
+        $sum = 0;
+        $this->inOrderTraversal($root, $sum, $low, $high);
+
+        return $sum;
+    }
+
+    function inOrderTraversal($node, &$sum, $low, $high) {
+        if($node->val == null) {
+            return;
+        }
+        if($node->val >= $low) {
+            $this->inOrderTraversal($node->left, $sum, $low, $high);
+        }
+        if(($node->val <= $high) && ($node->val >= $low)) {
+            $sum += $node->val;
+        } 
+        if($node->val <= $high) {
+            $this->inOrderTraversal($node->right, $sum, $low, $high);
+        }           
+    }
+}
