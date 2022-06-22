@@ -51,12 +51,28 @@ class Solution {
     * @return Integer
     */
     function rangeSumBST($root, $low, $high) {
-		$val = $root->val;
+        echo "関数が呼ばれました";
+        echo "\n";
+        echo "nodeは" . $root->val . "です";
+        echo "\n";
+
+        $val = $root->val;
         $sum = ($val>=$low && $val<=$high) ? $val : 0;
-        if ($val>$low && $root->left!==null)
+        echo "合計は" . $sum;
+        echo "\n";
+        if ($val>$low && $root->left!==null) {
+            echo "左へ" . "nodeは" . $root->val;
+            echo "\n";
             $sum += $this->rangeSumBST($root->left, $low, $high);
-        if ($val<$high && $root->right!==null)
+        }
+
+        if ($val<$high && $root->right!==null) {
+            echo "右へ" . "nodeは" . $root->val;
+            echo "\n";
             $sum += $this->rangeSumBST($root->right, $low, $high);
+        }
+        echo "合計を返します";
+        echo "\n";
         return $sum;
-	}
+    }
 }
