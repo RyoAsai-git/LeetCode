@@ -75,4 +75,16 @@ class Solution {
         echo "\n";
         return $sum;
     }
+
+    $sum += ($root->val >= $low && $root->val <= $high)? $root->val : 0;
+       
+       
+       if ($root->val > $low && $root->val !== null) {
+            $sum += $this->rangeSumBST($root->left, $low, $high);
+       }
+       if ($root->val < $high && $root->val !== null) {
+           $sum += $this->rangeSumBST($root->right, $low, $high);
+       }
+       
+       return $sum;
 }
