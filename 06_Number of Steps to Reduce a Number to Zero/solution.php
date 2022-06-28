@@ -1,22 +1,20 @@
 <?php
 
-class Solution
-{
+class Solution {
 
     /**
      * @param Integer $num
      * @return Integer
      */
-    function numberOfSteps($num)
-    {
+    function numberOfSteps($num) {
         $steps = 0;
         while ($num !== 0) {
             if ($num % 2 === 0) {
-                $num = $num / 2;
-                $steps += 1;
+                $num /= 2;
+                $steps++;
             } else {
-                $num = $num - 1;
-                $steps += 1;
+                $num -= 1;
+                $steps++;
             }
         }
         return $steps;
