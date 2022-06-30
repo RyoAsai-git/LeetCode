@@ -27,3 +27,6 @@ class Solution {
         return $maxDepth;
     }
 }
+
+// Runtime: 23 ms, faster than 16.38% of PHP online submissions for Maximum Depth of Binary Tree.
+// Memory Usage: 20.6 MB, less than 94.83% of PHP online submissions for Maximum Depth of Binary Tree.
