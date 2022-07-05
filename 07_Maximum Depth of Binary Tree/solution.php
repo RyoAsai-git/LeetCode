@@ -13,13 +13,15 @@
  *     }
  * }
  */
-class Solution {
+class Solution
+{
 
     /**
      * @param TreeNode $root
      * @return Integer
      */
-	function maxDepth($root) {
+    function maxDepth($root)
+    {
         if ($root == null) {
             return 0;
         }
