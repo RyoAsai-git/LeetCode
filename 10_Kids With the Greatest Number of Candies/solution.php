@@ -22,3 +22,7 @@ class Solution
         return $candies;
     }
 }
+
+
+// Runtime: 24 ms, faster than 13.64% of PHP online submissions for Kids With the Greatest Number of Candies.
+// Memory Usage: 19.1 MB, less than 72.73% of PHP online submissions for Kids With the Greatest Number of Candies.
