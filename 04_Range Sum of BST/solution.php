@@ -13,7 +13,8 @@
  *     }
  * }
  */
-class Solution {
+class Solution
+{
 
     /**
      * @param TreeNode $root
@@ -21,7 +22,8 @@ class Solution {
      * @param Integer $high
      * @return Integer
      */
-    function rangeSumBST($root, $low, $high) {
+    function rangeSumBST($root, $low, $high)
+    {
         if ($root == null) return 0;
 
         $sum = 0;

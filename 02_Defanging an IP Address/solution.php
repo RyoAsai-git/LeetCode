@@ -1,11 +1,13 @@
 <?php
-class Solution {
+class Solution
+{
 
     /**
-    * @param String $address
-    * @return String
-    */
-    function defangIPaddr($address) {
+     * @param String $address
+     * @return String
+     */
+    function defangIPaddr($address)
+    {
         return str_replace(".", "[.]", $address, $n);
     }
 }
