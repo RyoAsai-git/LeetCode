@@ -17,5 +17,6 @@ class Solution:
             ans.left = self.mergeTrees(t1.left, t2.left)
             ans.right = self.mergeTrees(t1.right, t2.right)
             return ans
+
 # Runtime: 92 ms, faster than 63.90% of Python3 online submissions for Merge Two Binary Trees.
 # Memory Usage: 15.1 MB, less than 5.72% of Python3 online submissions for Merge Two Binary Trees.
