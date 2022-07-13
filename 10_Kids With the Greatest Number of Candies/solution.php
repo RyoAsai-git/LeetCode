@@ -2,7 +2,6 @@
 
 class Solution
 {
-
     /**
      * @param Integer[] $candies
      * @param Integer $extraCandies
