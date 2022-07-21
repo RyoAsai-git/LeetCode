@@ -35,7 +35,6 @@ class Solution
     }
 }
 
-
 // 再起的に処理する
 // 考え方としては与えられたnodeの値がある間、LとRの値とnodeの値を比較し、L<= node.value <= Rの場合は総和にプラスし、それ以外の場合、
 // Lよりnode.valueが大きい場合は左のnodeへ移り、Rよりnode.valueが小さい場合は右のnodeへと移る関数を実装し、総和を出す
